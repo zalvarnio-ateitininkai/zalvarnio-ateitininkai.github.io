@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vašingtono „Žažanavičiai“ Mokykla</title>
+  <meta name="description" content="Vašingtono lietuvių savaitgalio mokykla – kalba, kultūra, bendruomenė.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --yellow: #FDB913;
+      --green: #006A44;
+      --red: #C1272D;
+      --dark: #1e1e1e;
+      --light: #f5f5f5;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--yellow), var(--green), var(--red));
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    nav {
+      background: white;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 0.8rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+    }
+
+    nav a:hover { color: var(--green); }
+
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: var(--green);
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      margin-bottom: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .grid-2 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--green);
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
+    .button:hover {
+      background: var(--red);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background: var(--green);
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover { background: var(--red); }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Vašingtono „Žažanavičiai“</h1>
+  <p>Lietuvių savaitgalio mokykla Vašingtone, DC</p>
+</header>
+
+<nav>
+  <a href="#apie">Apie</a>
+  <a href="#veikla">Veikla</a>
+  <a href="#kalendorius">Kalendorius</a>
+  <a href="#naujienos">Naujienos</a>
+  <a href="#galerija">Galerija</a>
+  <a href="#kontaktai">Kontaktai</a>
+</nav>
+
+<section id="apie">
+  <h2>Apie mus</h2>
+  <div class="card">
+    <p>Mokykla įkurta Vašingtone, DC. Mūsų tikslas – puoselėti lietuvių kalbą, kultūrą ir bendruomenę tarp jaunųjų lietuvių šeimų JAV.</p>
+    <p><strong>Misija:</strong> Kurti saugią, kūrybingą ir bendruomenišką aplinką vaikams mokytis lietuvių kalbos bei pažinti Lietuvos istoriją ir tradicijas.</p>
+  </div>
+</section>
+
+<section id="veikla">
+  <h2>Mūsų veikla</h2>
+  <div class="grid grid-2">
+    <div class="card">
+      <h3>Lietuvių kalbos pamokos</h3>
+      <p>Amžiaus grupės nuo darželio iki paauglių. Kūrybiškos ir įtraukiančios pamokos.</p>
+    </div>
+    <div class="card">
+      <h3>Kultūriniai renginiai</h3>
+      <p>Švenčiame tradicines šventes – Užgavėnes, Kovo 11-ąją, Kalėdas.</p>
+    </div>
+    <div class="card">
+      <h3>Skautai</h3>
+      <p>Bendradarbiaujame su lietuvių skautų organizacija.</p>
+    </div>
+    <div class="card">
+      <h3>Menas ir muzika</h3>
+      <p>Vaikai dalyvauja dailės, teatro ir muzikos veiklose.</p>
+    </div>
+  </div>
+</section>
+
+<section id="kalendorius">
+  <h2>Kalendorius</h2>
+  <div class="card">
+    <ul>
+      <li>Vasario 16 – Lietuvos valstybės atkūrimo diena</li>
+      <li>Kovo 11 – Nepriklausomybės atkūrimo diena</li>
+      <li>Birželis – Mokslo metų uždarymas</li>
+    </ul>
+    <a class="button" href="#">Registruotis</a>
+  </div>
+</section>
+
+<section id="naujienos">
+  <h2>Naujienos</h2>
+  <div class="card">
+    <h3>Atidaryta registracija 2026 metams</h3>
+    <p>Kviečiame registruotis į naujus mokslo metus!</p>
+  </div>
+</section>
+
+<section id="galerija">
+  <h2>Galerija</h2>
+  <p><em>Nuotraukos iš renginių ir pamokų. Gerbiame vaikų saugumą ir privatumą.</em></p>
+  <div class="grid grid-3 gallery">
+    <img src="https://via.placeholder.com/300x200" alt="Renginys 1">
+    <img src="https://via.placeholder.com/300x200" alt="Pamoka">
+    <img src="https://via.placeholder.com/300x200" alt="Šventė">
+  </div>
+</section>
+
+<section id="kontaktai">
+  <h2>Kontaktai</h2>
+  <div class="card">
+    <p>Email: info@zaznaviciai.org</p>
+    <p>Vašingtonas, DC</p>
+
+    <form action="https://formspree.io/f/YOUR_ID" method="POST">
+      <input type="text" name="name" placeholder="Jūsų vardas" required>
+      <input type="email" name="email" placeholder="Jūsų el. paštas" required>
+      <textarea name="message" rows="4" placeholder="Žinutė"></textarea>
+      <button type="submit">Siųsti</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Vašingtono „Žažanavičiai“ | Lietuvių bendruomenė JAV</p>
+</footer>
+
+</body>
+</html>
