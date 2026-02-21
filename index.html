@@ -42,15 +42,36 @@ header {
   overflow: hidden;
 }
 
+.logo-container {
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.main-logo {
+  max-width: 150px;
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25));
+  transition: transform 0.3s ease;
+}
+
+.main-logo:hover {
+  transform: scale(1.05);
+}
+
 header h1 {
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 header p {
   font-size: 1.1rem;
   opacity: 0.95;
+  position: relative;
+  z-index: 2;
 }
 
 /* subtle overlay glow */
@@ -248,6 +269,9 @@ footer {
 <body>
 
 <header>
+  <div class="logo-container">
+    <img src="logotipai/IMG_7367.png" alt="Vašingtono Žalvarnio Ateitininkų logotipas" class="main-logo">
+  </div>
   <h1>Vašingtono Žalvarnio Ateitininkai</h1>
   <p>Lietuvių savaitgalio mokykla Vašingtone, DC</p>
 </header>
@@ -323,15 +347,9 @@ footer {
 <section id="kontaktai">
   <h2>Kontaktai</h2>
   <div class="card">
-    <p>Email: ...</p>
+    <p>Email: saulesnamas@yahoo.com</p>
+    <p>Telefono numeris: (571) 277-7516</p>
     <p>Vašingtonas, DC</p>
-
-    <form action="https://formspree.io/f/YOUR_ID" method="POST">
-      <input type="text" name="name" placeholder="Jūsų vardas" required>
-      <input type="email" name="email" placeholder="Jūsų el. paštas" required>
-      <textarea name="message" rows="4" placeholder="Žinutė"></textarea>
-      <button type="submit">Siųsti</button>
-    </form>
   </div>
 </section>
 
