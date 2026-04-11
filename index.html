@@ -171,6 +171,49 @@ h2::after {
   box-shadow: var(--shadow-hover);
 }
 
+/* ===== DROPDOWN (DETAILS) ===== */
+
+details {
+  background: var(--card-bg);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+details[open] {
+  padding-bottom: 2rem;
+}
+
+summary {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--green);
+  list-style: none; /* Removes default arrow */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Custom indicator instead of the default arrow */
+summary::after {
+  content: "▼";
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.history-content {
+  margin-top: 1.5rem;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+    
 /* ===== GRID ===== */
 
 .grid {
@@ -291,6 +334,14 @@ footer {
     <p>Kuopa atkurta Vašingtone, D.C. Mūsų tikslas – puoselėti lietuvių kalbą, kultūrą, bendruomenę bei religiją tarp jaunųjų lietuvių šeimų JAV.</p>
     <p><strong>Misija:</strong> Kurti saugią, kūrybingą ir bendruomenišką aplinką vaikams mokytis lietuvių kalbos bei pažinti Lietuvos istoriją ir tradicijas.</p>
   </div>
+  <details>
+    <summary>Istorija</summary>
+    <div class="history-content">
+      <p>Ateitininkų Moksleivių kuopa „Žalvarnis” susikūrė apie 1965metus. Pirmoji ir ilgalaikė kuopos globėja buvo p. Elvyra Vodopalienė. Iš pradžių ji subūrė moksleivius į ateitininkų kuopą,o vėliau, 1966m. globojo ir jaunučių kuopą. Šiuo metu ji su dukra gyvena Colorado valstijoje.</p>
+      <p>Dėkojame p. Marytei Dambriūnaitei Schmitt už Žalvarnio kuopos susikūrimo informaciją ir nuotraukas.</p>
+      <p>Washington DC moksleiviai nusprendė pavadinti savo kuopą kun. Jurgio Tilvyčio garbei. Šis kunigas savo straipsnius pasirašinėjo ateitininkų spaudoje Žalvarnio slapyvardžiu. 1912m. šiuo slapyvardžiu jis “Ateities” žurnale paskelbė sukurtą ateitininkų himną. Kun. J. Tilvytis kūrė eiles, kurios virto dainomis ir himnais. Jis labai mėgo dainuoti, rūpinosi socialiai silpnesniais ir buvo net tik lietuvybės skatintojas, bet ir uoliai skelbė blaiviją. Jis buvo linksmų plaučių žmogus, jam labai rūpėjo Lietuvos jaunimo išsilavinimas ir darbas Lietuvos gerbūvio kėlimui.</p>
+    </div>
+  </details>
 </section>
 
 <section id="veikla">
